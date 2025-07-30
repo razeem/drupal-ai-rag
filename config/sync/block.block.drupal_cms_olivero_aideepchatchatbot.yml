@@ -1,0 +1,38 @@
+uuid: ead6a517-57ce-432b-8211-086b65d8d6b9
+langcode: en
+status: false
+dependencies:
+  module:
+    - ai_chatbot
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_aideepchatchatbot
+theme: drupal_cms_olivero
+region: content
+weight: -5
+provider: null
+plugin: ai_deepchat_block
+settings:
+  id: ai_deepchat_block
+  label: 'Member Chatbot'
+  label_display: visible
+  provider: ai_chatbot
+  ai_assistant: members_agent
+  bot_name: 'Generic Chatbot'
+  bot_image: /core/misc/druplicon.png
+  use_username: 1
+  default_username: User
+  use_avatar: 1
+  default_avatar: /core/misc/favicon.ico
+  first_message: 'Hello! How can I help you today?'
+  stream: null
+  toggle_state: remember
+  width: 400px
+  height: 500px
+  placement: bottom-right
+  show_structured_results: false
+  show_copy_icon: true
+  collapse_minimal: false
+  style_file: 'module:ai_chatbot:bard.yml'
+  verbose_mode: true
+visibility: {  }

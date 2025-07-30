@@ -1,0 +1,13 @@
+uuid: fc0f13c4-e201-4626-8735-fcc1519cb806
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: pnJS9cW8aVLAkMjy-sTmfnFm5vwoFZNioBOg_YhgkQU
+id: media.16_9_wide
+label: '16:9 Wide'
+description: ''
+targetEntityType: media
+cache: true

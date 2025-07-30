@@ -1,0 +1,31 @@
+uuid: 3ee99119-e11b-4070-8f73-a7c5a89223f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.members.field_description
+    - field.field.node.members.field_designation
+    - node.type.members
+  module:
+    - user
+id: node.members.card
+targetEntityType: node
+bundle: members
+mode: card
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_designation: true
+  search_api_excerpt: true

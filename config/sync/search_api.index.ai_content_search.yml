@@ -1,0 +1,79 @@
+uuid: 25fe3061-ff39-4ff2-a1e1-b65680fb7ed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - field.storage.node.field_designation
+    - search_api.server.ai_server
+  module:
+    - node
+id: ai_content_search
+name: 'AI Content Search'
+description: ''
+read_only: false
+field_settings:
+  field_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_description
+  field_designation:
+    label: Designation
+    datasource_id: 'entity:node'
+    property_path: field_designation
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_designation
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode: {  }
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - members
+    languages:
+      default: false
+      selected:
+        - en
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: ai_server

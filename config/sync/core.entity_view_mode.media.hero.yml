@@ -1,0 +1,13 @@
+uuid: cb19eaf7-e8dc-4b7a-8df9-f78c2a508fbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: zAj-eiOJoImMZ2MAmC2k7HFfOKvT0JA_aHDz6RaN2uQ
+id: media.hero
+label: Hero
+description: ''
+targetEntityType: media
+cache: true

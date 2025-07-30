@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: 5NZOobHFb17N--ZKFQxPuIXV5y5hRVdDMLJw07UQq4w
+api_key: zilliz_key
+server: 'https://in03-8c3b567cd17f93e.serverless.aws-eu-central-1.cloud.zilliz.com'
+port: 443

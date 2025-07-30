@@ -1,0 +1,27 @@
+uuid: 037151ac-b9e9-423e-9b9b-b9b407ea7397
+langcode: en
+status: true
+dependencies:
+  module:
+    - ai_search
+id: ai_ollama_server
+name: 'AI Ollama Server'
+description: 'The ollama server for Drupal AI'
+backend: search_api_ai_search
+backend_config:
+  chat_model: 'ollama__mistral:latest'
+  database: milvus
+  database_settings:
+    database_name: default
+    collection: drupal_ollama_ai_collection
+    metric: cosine_similarity
+  embeddings_engine: 'ollama__mistral:latest'
+  embeddings_engine_configuration:
+    set_dimensions: false
+    dimensions: 4096
+  embedding_strategy: contextual_chunks
+  embedding_strategy_configuration:
+    chunk_size: '500'
+    chunk_min_overlap: '100'
+    contextual_content_max_percentage: '30'
+  embedding_strategy_details: ''

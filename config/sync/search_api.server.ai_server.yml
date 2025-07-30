@@ -1,0 +1,27 @@
+uuid: 09335e69-b788-4f53-b10d-5edc42aec5c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - ai_search
+id: ai_server
+name: 'AI Server'
+description: 'AI server for drupal'
+backend: search_api_ai_search
+backend_config:
+  chat_model: openai__gpt-3.5-turbo
+  database: milvus
+  database_settings:
+    database_name: default
+    collection: drupalai_applab
+    metric: cosine_similarity
+  embeddings_engine: openai__text-embedding-3-small
+  embeddings_engine_configuration:
+    set_dimensions: false
+    dimensions: 1536
+  embedding_strategy: contextual_chunks
+  embedding_strategy_configuration:
+    chunk_size: '500'
+    chunk_min_overlap: '100'
+    contextual_content_max_percentage: '30'
+  embedding_strategy_details: ''

@@ -1,0 +1,37 @@
+uuid: f77f0b75-b8a0-4efb-8924-02e06ebf17a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.members.field_description
+    - field.field.node.members.field_designation
+    - node.type.members
+  module:
+    - user
+id: node.members.default
+targetEntityType: node
+bundle: members
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_designation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
